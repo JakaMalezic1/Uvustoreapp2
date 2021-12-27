@@ -4,13 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -52,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject object =response.getJSONObject(i);
                     String name = object.getString("name");
                     String price = object.getString("price");
-                    String dateadded = object.getString("date Added");
+                    String dateadded = object.getString("addedDate");
 
-                    data.add(name + " " + price + " " + dateadded);
+                    dateadded = dateadded.substring(0,10);
+
+                    data.add(name + " " + price + "€ " + dateadded);
 
                 } catch (JSONException e){
                     e.printStackTrace();
