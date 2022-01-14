@@ -97,7 +97,7 @@ Imamo tudi možnost brisanja elementov pri čemer vnesemo ID izdelka in tako bri
 Opis del
 
 
-Alen L Vidmar:
+Alen Vidmar:
 Večji del spletne aplikacije, podatkovna baza.
 
 Jaka Maležič:
